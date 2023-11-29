@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PROG_POE.Models.Semester>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+              Module Code
+            </th>
+            <th>
+               Study Hours
+            </th>
+            <th>
+             Week Number
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudyHours)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WeekNum)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="UpdateHours" class="btn btn-primary">Update Study Hours</a>

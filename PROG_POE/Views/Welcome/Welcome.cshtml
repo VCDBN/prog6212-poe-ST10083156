@@ -1,0 +1,21 @@
+﻿@using PROG_POE
+
+
+@if (ViewBag.Login == null)
+{
+    <h1>Welcome!</h1>
+    <br />
+    <h4>Login to access all of your modules</h4>
+    <a asp-controller="Login" asp-action="Login" class="btn btn-primary">Login</a>
+}
+else
+{
+    <h1>Home!</h1>
+    <br />
+    <h4>Proceed to Modules :"</h4>
+    <a asp-controller="Module" asp-action="Index" class="btn btn-primary">My Modules</a>
+    <h4>Proceed to Study Hours :"</h4>
+
+    <a asp-controller="StudyHours" asp-action="Index" class="btn btn-primary">My Study Hours</a>
+}
+

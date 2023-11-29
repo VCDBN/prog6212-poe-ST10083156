@@ -1,0 +1,23 @@
+﻿@using PROG_POE
+
+<h1>Semester Details</h1>
+<h3>Please enter details about your semester</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DetailsInput">
+            <div class="form-group">
+                <label class="control-label">Number of weeks</label>
+                <input name="NumWeeks" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Start Date</label>
+                <input name="StartDate" type="date"class="form-control" />
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Proceed" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
